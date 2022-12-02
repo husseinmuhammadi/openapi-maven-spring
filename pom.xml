@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.javastudio.open-api</groupId>
-    <artifactId>open-api-parent</artifactId>
+    <groupId>com.javastudio.openapi</groupId>
+    <artifactId>openapi-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -48,10 +48,10 @@
     </properties>
 
     <modules>
-        <module>api</module>
+<!--        <module>api</module>-->
+<!--        <module>repository</module>-->
+<!--        <module>service</module>-->
         <module>web</module>
-        <module>repository</module>
-        <module>service</module>
     </modules>
 
     <dependencyManagement>
