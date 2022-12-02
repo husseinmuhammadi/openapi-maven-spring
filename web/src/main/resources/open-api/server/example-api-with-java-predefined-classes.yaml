@@ -1,0 +1,29 @@
+openapi: 3.0.3
+info:
+  title: Example service
+  description: Example service
+  version: 1.0.0
+servers:
+  - url: 'https://'
+paths:
+  /products:
+    get:
+      description: Find all products
+      operationId: findProducts
+      responses:
+        200:
+          description: Successful response
+    post:
+      description: Save new product
+      operationId: saveProduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                model:
+                  type: string
+      responses:
+        200:
+          description: Product saved successfully
