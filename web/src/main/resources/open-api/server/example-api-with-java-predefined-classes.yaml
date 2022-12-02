@@ -10,6 +10,12 @@ paths:
     get:
       description: Find all products
       operationId: findProducts
+      parameters:
+        - in: query
+          name: locale
+          required: false
+          schema:
+            type: Locale
       responses:
         200:
           description: Successful response
@@ -20,10 +26,24 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                model:
-                  type: string
+              $ref: '#/components/schemas/Product'
       responses:
         200:
           description: Product saved successfully
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        model:
+          type: string
+        name:
+          type: string
+        locale:
+          type: Locale
+        address1:
+          type: Address
+        address:
+          $ref: '#/components/schemas/Address'
+    Address:
+      type: object
